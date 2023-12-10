@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,300&display=swap');
+
+@layer components {
+    input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+
+    }
+}
+
+.search_bar::-webkit-scrollbar {
+    @apply w-1 h-2
+}
+
+.search_bar::-webkit-scrollbar-thumb {
+    @apply bg-slate-600
+}
+
+/* .dropdown_country {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 500ms ease-in-out;
+} */
+
+.dropdown_country.active {
+    max-height: 10rem;
+}
+
+.animated.fade-in-top {
+    animation: fade-top 500ms ease-in-out 1;
+}
+
+.animated.fade-in-right {
+    animation: fade-right 500ms ease-in-out;
+}
+
+@keyframes fade-top {
+    from {
+        transform: translateY(-25rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    from {
+        transform: translateX(50rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
